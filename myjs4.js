@@ -29,3 +29,18 @@ function remove(e){
     }
 }
 }
+function check(e){
+    var tex=e.target.value.toLowerCase();
+    // isme check krne ke hai
+    var  items=itemlist.getElementsByTagName('li');
+    Array.from(items).forEach(function(item){
+       var itemname=item.firstChild.textContent;
+       if(itemname.toLowerCase().indexOf(tex)!=-1){
+          item.style.display='block';
+       }
+       else{
+        item.style.display='none';
+       }
+    });
+
+}
